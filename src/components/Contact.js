@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { Reveal } from "./Reveal";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/images/contact-img.svg";
@@ -9,45 +9,11 @@ import navIcon2 from '../assets/images/icons8-google-scholar.svg';
 import navIcon3 from '../assets/images/icons8-level-up-your-coding-skills-and-quickly-land-a-job-24.png';
 import navIcon4 from '../assets/images/icons8-codeforces.-programming-competitions-and-contests,-programming-community.-24.png';
 import navIcon5 from '../assets/images/icons8-linkedin.svg';
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+
 export const Contact = () => {
-  const formInitialDetails = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: ''
-  }
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
-  const [status, setStatus] = useState({});
+  
 
-  const onFormUpdate = (category, value) => {
-      setFormDetails({
-        ...formDetails,
-        [category]: value
-      })
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setButtonText("Sending...");
-    let response = await fetch("http://localhost:3000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully'});
-    } else {
-      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
-    }
-  };
+ 
 
   return (
     <section className="contact" id="contact">
@@ -64,8 +30,7 @@ export const Contact = () => {
           <Col size={12} md={6}>
            
                 <h2>Get In Touch</h2>
-                <TrackVisibility>
-                {({ isVisible }) =>
+                
                 <Reveal>    
                 <div className="container">
                   <div className="emailCont">
@@ -93,8 +58,7 @@ export const Contact = () => {
                   </div>
                 </div>
                 </Reveal>
-          }
-          </TrackVisibility>
+        
           </Col>
         </Row>
       </Container>

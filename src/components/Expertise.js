@@ -2,13 +2,13 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import colorSharp from '../assets/images/color-sharp.png'
 import wicon from "../assets/images/workicon.png"
 import eicon from "../assets/images/eduicon.png"
-import { ArrowDownCircle } from 'react-bootstrap-icons';
+
 import React, { useState } from 'react';
 import '../BarLine.css';
-  import { generateMeshGradient } from "https://cdn.skypack.dev/meshgrad";
+
 import TrackVisibility from 'react-on-screen';
-import { WindowDash } from "react-bootstrap-icons";
-import { act } from "react-dom/test-utils";
+
+
 import { Reveal } from "./Reveal";
 export const Expertise = () => {
     const [activeButtons, setMyArray] = useState([]);

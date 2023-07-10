@@ -9,6 +9,7 @@ import { Contact } from './components/Contact';
 import { Research } from './components/Research';
 import { Expertise } from './components/Expertise';
 import { Footer } from './components/Footer';
+<script src="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" ></script>
 function App() {
   return (
     <div className="App">
