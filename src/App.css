@@ -1,5 +1,4 @@
-/* Custom Fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/* Custom Fonts*/@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 /* @font-face {
 	font-family: Centra;
 	src: url('src/assets/fonts/CentraNo2-Bold.ttf');
@@ -1005,9 +1004,9 @@ txt-rotate.progressBar p{
 /**********************************/
 
 /************ Footer Css ************/
-/* .footer {
+.footer {
   padding: 0 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
+  /* background-image: url('../assets/images/footer-bg.png'); */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1081,4 +1080,4 @@ txt-rotate.progressBar p{
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
-} */
+}
